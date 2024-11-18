@@ -66,20 +66,7 @@ body {
     margin-right: 20px; 
 }
 
-/* .login-card {
 
-    overflow-y:hidden;
-    position: absolute;
-    top: 50%; 
-    right: 100px; 
-    transform: translateY(-50%);
-    background-color: white; 
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
-    width: 400px; 
-    margin-right: 10px; 
-} */
 
 .login-card {
     position: fixed; 
@@ -159,8 +146,8 @@ body {
     border-radius: 6px;
     font-size: 1.2rem;
     cursor: pointer;
-    display: block; /* Ensure buttons are block-level elements */
-    margin-bottom: 15px; /* Space between buttons */
+    display: block; 
+    margin-bottom: 15px; 
 }
 
 .login-card button:hover {
@@ -168,9 +155,9 @@ body {
 }
 
 .guest-btn {
-    background-color: #28a745; /* Change to your preferred color */
+    background-color: #28a745; 
 }
 
 .guest-btn:hover {
-    background-color: #218838; /* Darker green for hover effect */
+    background-color: #218838; 
 }

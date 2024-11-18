@@ -12,13 +12,13 @@ import { Router } from '@angular/router';
   styleUrl: './gamescore.component.css'
 })
 export class GamescoreComponent {
+
+  constructor(private http: HttpClient ,private router: Router) {}
+
   gameStats: any;
   userEmail: string | null = localStorage.getItem('loginUseremail'); 
   showInstructions: boolean = true; 
   fromPage: string | undefined;
-
-  constructor(private http: HttpClient ,private router: Router) {}
-
 
 ngOnInit(): void {
   const userId = localStorage.getItem('loginUserId'); 

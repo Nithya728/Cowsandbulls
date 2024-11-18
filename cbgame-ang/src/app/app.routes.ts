@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { GameComponent } from './game/game.component';
+
 import { authGuard } from './auth.guard';
-import { UserStatsComponentComponent } from './user-stats-component/user-stats-component.component';
+
 
 
 export const routes: Routes = [
@@ -16,6 +16,5 @@ export const routes: Routes = [
   },
 
 
-  // { path: 'game', component: GameComponent , canActivate: [authGuard]},
-  // { path: 'userstat', component: UserStatsComponentComponent , canActivate: [authGuard]},
+  
   ];

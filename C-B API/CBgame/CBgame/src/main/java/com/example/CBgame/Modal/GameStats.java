@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Table(name = "GameScore")
 @Entity
 @Data
 @NoArgsConstructor
@@ -18,7 +19,7 @@ public class GameStats {
     private int numberOfWins;
     private int giveUps;
     private int gamesPlayed;
-    private int score; // New field for tracking score
+    private int score;
 
     @OneToOne
     @JoinColumn(name = "user_id", referencedColumnName = "user_id")

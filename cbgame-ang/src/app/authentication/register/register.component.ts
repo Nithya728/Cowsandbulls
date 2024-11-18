@@ -28,18 +28,53 @@ user = {
 
 constructor(private http: HttpClient,private router:Router) {}
 
-onSubmit() {
+// onSubmit(registrationForm: NgForm) {
+  
+//   if (registrationForm.invalid) {
+//     alert('Please fill out the form correctly.');
+//     return;
+//   }
+
+//   if (this.user.password !== this.user.confirmpassword) {
+//     alert('Passwords do not match. Please check and try again.');
+//     return;
+//   }
+
+//   this.http.post('http://localhost:8080/api/auth/register', this.user, { responseType: 'text' })
+//     .subscribe(response => {
+//       console.log(response);
+//       alert('Registration successful');
+//       localStorage.setItem('loginUser', this.user.username);
+//       this.router.navigate(['/auth/login']);
+//     }, error => {
+//       console.error(error);
+//       alert('Registration failed');
+//     });
+// }
+// }
+
+onSubmit(registrationForm: NgForm) {
+  if (registrationForm.invalid) {
+    alert('Please fill out the form correctly.');
+    return;
+  }
+
+  if (this.user.password !== this.user.confirmpassword) {
+    alert('Passwords do not match. Please check and try again.');
+    return;
+  }
+
+  console.log('Email:', this.user.email); // Debugging the email
+
   this.http.post('http://localhost:8080/api/auth/register', this.user, { responseType: 'text' })
     .subscribe(response => {
       console.log(response);
       alert('Registration successful');
       localStorage.setItem('loginUser', this.user.username);
       this.router.navigate(['/auth/login']);
-
     }, error => {
       console.error(error);
       alert('Registration failed');
     });
 }
 }
-

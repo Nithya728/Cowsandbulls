@@ -2,9 +2,6 @@
     <div class="brand-logo"></div>
     <div class="game-container">
   
-      <!-- Back Button -->
-      
-  
       <div *ngIf="showInstructions" class="instructions">
         <table *ngIf="gameStats">
           <thead>
@@ -29,9 +26,7 @@
         <p *ngIf="!gameStats">No game stats available for the user.</p>
         <button (click)="goBack()" class="back-button">Back</button>
       </div>
-  
-  
-     
+
     </div>
   </body>
   

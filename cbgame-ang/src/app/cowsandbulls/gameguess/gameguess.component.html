@@ -2,10 +2,6 @@
     <div class="brand-logo"></div>
   <div class="game-container">
    
-  
-   
-  
-   
     <div *ngIf="showInstructions" class="instructions" >
       <div class="input-container">
         <label for="guess">Enter your guess (4-digit number):</label>
@@ -13,7 +9,6 @@
         <button (click)="onSubmit()">Submit Guess</button>
       </div>
   
-      
       <div *ngIf="guessHistory.length > 0">
         <h3>Guess History:</h3>
         <ul class="guess-history">
@@ -21,25 +16,17 @@
             Guess: {{ guess.number }} - Result: {{ guess.result }}
           </li>
         </ul>
-
         </div>
   
       <div *ngIf="message">
         <p>{{ message }}</p>
       </div>
 
-      
-  
       <div>
         <button (click)="newGame()">New Game</button>
         <button (click)="giveUp()">Give Up</button>
         <button (click)="logout()">Logout</button>
         <button (click)="Score()">Score</button>
       </div>
-  
-      
-  
-  
-    
       </div>
    

@@ -1,42 +1,42 @@
 table {
-    width: 70%; /* Make the table take the full width of its container */
-    border-collapse: collapse; /* Remove gaps between cells */
-    margin: 20px auto; /* Add some space above and below the table, and center it horizontally */
-    font-size: 16px; /* Set a readable font size */
-    text-align: left; /* Align text to the left */
+    width: 70%; 
+    border-collapse: collapse; 
+    margin: 20px auto; 
+    font-size: 16px; 
+    text-align: left; 
 }
 
 th, td {
-    border: 2px solid #0a0909; /* Add a light border to table cells */
-    padding: 10px 40px; /* Add more horizontal padding for spacing between columns */
+    border: 2px solid #0a0909; 
+    padding: 10px 40px; 
     text-align: center;
 }
 
 th {
-    background-color: #4CAF50; /* Add a background color to table header */
-    color: white; /* Make the header text white */
-    font-weight: bold; /* Bold font for header */
+    background-color: #4CAF50; 
+    color: white; 
+    font-weight: bold; 
     text-align: center;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2; /* Alternate row coloring for better readability */
+    background-color: #f2f2f2; 
 }
 
 tr:hover {
-    background-color: #f1f1f1; /* Add a subtle hover effect */
+    background-color: #f1f1f1; 
 }
 
 td {
-    color: #333; /* Text color for table data */
+    color: #333; 
     text-align: center;
 }
 
 caption {
-    margin-bottom: 10px; /* Space between caption and table */
-    font-size: 18px; /* Larger font for caption */
-    font-weight: bold; /* Bold font for caption */
-    color: #333; /* Text color for caption */
+    margin-bottom: 10px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    color: #333; 
 }
 
 .brand-logo {
@@ -66,14 +66,14 @@ caption {
 .game-container {
     text-align: center;
     margin-top: 300px;
-    width: 100%; /* Make the container take the full width */
+    width: 100%; 
     display: flex;
-    justify-content: center; /* Center the table horizontally within the container */
+    justify-content: center; 
 }
 .back-button {
     padding: 10px 20px;
     font-size: 14px;
-    background-color: #4CAF50; /* Green color */
+    background-color: #4CAF50; 
     color: white;
     border: none;
     cursor: pointer;

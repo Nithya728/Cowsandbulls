@@ -14,11 +14,8 @@ import { Router } from '@angular/router';
 export class GameguessComponent{
   constructor(private gameservice: GameService,private router:Router) {}
 
- 
-
-  username: string |null= localStorage.getItem('loginUser');
-  
-  guess: string = '';
+    username: string |null= localStorage.getItem('loginUser');
+    guess: string = '';
     result: string = '';
     message: string = '';
     gameOver: boolean = false;
@@ -28,26 +25,20 @@ export class GameguessComponent{
     
     
     logout(){
-      
       localStorage.removeItem('isAuthenticated');  
       localStorage.removeItem('loginUser');  
       this.router.navigate(['/auth/login']);
       localStorage.removeItem('loginUseremail');
       localStorage.removeItem('loginUserId');
       localStorage.removeItem('isGuestUser'); 
-  
     }
   
-    // Score(){
-    //   this.router.navigate(['/games/gamescore']);
-    // }
-    
     Score() {
       if (localStorage.getItem('isGuestUser') === 'true') {
         this.message = 'Score is not available for guest'; 
         alert('Score is not available for guest'); 
       } else {
-        this.router.navigate(['/games/gamescore']); // Navigate if not a guest
+        this.router.navigate(['/games/gamescore']); 
       }
     }
     
@@ -56,35 +47,12 @@ export class GameguessComponent{
       this.newGame(); 
     }
   
-    
-    
-  
-    // onSubmit() {
-    //   if (this.guess.length === 4 && !this.gameOver) {
-    //     const email = localStorage.getItem('loginUseremail'); 
-    //     if (email) {
-    //       this.gameservice.checkGuess(this.guess, email).subscribe((res) => {
-    //         this.result = res;
-    //         this.guessHistory.push({ number: this.guess, result: this.result }); 
-    //         if (this.result.includes('Bulls: 4')) {
-    //           this.gameOver = true;
-    //           this.message = 'Congratulations! You guessed the code!';
-    //         }
-    //       });
-    //     } else {
-    //       this.message = 'User email not found. Please log in again.';
-    //     }
-    //   } else {
-    //     this.message = 'Please enter a 4-digit number.';
-    //   }
-    // }
-
     onSubmit() {
-      const numberPattern = /^\d{4}$/; // Regular expression for 4-digit number
+      const numberPattern = /^\d{4}$/; 
       
       if (!numberPattern.test(this.guess)) {
         this.message = 'Please enter a valid 4-digit number.';
-        return; // Stop further processing if validation fails
+        return; 
       }
     
       if (this.guess.length === 4 && !this.gameOver) {
@@ -104,9 +72,6 @@ export class GameguessComponent{
       }
     }
     
-    
-  
-    
     resetGame() {
       this.guess = '';
       this.result = '';
@@ -116,7 +81,6 @@ export class GameguessComponent{
       this.gameservice.resetGame().subscribe();
     }
   
-    
     newGame() {
       this.resetGame(); 
     }
