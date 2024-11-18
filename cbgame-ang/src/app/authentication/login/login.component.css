@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+    height: 100vh;
+    color: white;
+    position: relative;
+    overflow-x: hidden;
+
+}
+
+.brand-logo {
+    background-color: #004080;
+  background-image: url('/cb.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; 
+}
+
+.website-name-box {
+    font-size: 2.4rem; 
+    position: absolute;
+    top: 40%; 
+    left: 0; 
+    margin-left: 50px; 
+    transform: translateY(-50%); 
+    color: white; 
+    background-color: navy; 
+    padding: 20px 20px; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    animation: slideInFromLeft 3s ease-in-out 1; 
+    display: flex; 
+    align-items: center; 
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translate(-100%, -50%); 
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, -50%); 
+    }
+}
+
+.circle {
+    width: 100px; 
+    height: 100px; 
+    background-color: white; 
+    border-radius: 50%; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    background-image: url('/cows&bulls.jpg');
+    
+    background-size: cover; 
+    background-position: center; 
+    margin-right: 20px; 
+}
+
+/* .login-card {
+
+    overflow-y:hidden;
+    position: absolute;
+    top: 50%; 
+    right: 100px; 
+    transform: translateY(-50%);
+    background-color: white; 
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
+    width: 400px; 
+    margin-right: 10px; 
+} */
+
+.login-card {
+    position: fixed; 
+    top: 50%; 
+    right: 100px; 
+    transform: translateY(-50%); 
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    width: 400px; 
+    margin-right: 10px;
+    z-index: 10; 
+}
+
+
+.login-card p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: navy; 
+    font-size: 1.2rem;
+}
+
+.login-card h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: navy;
+    font-size: 1.8rem;
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: navy; 
+    font-size: 1.8rem;
+}
+
+.login-card label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: navy; 
+}
+
+.login-card input {
+    width: calc(100% - 20px); 
+    padding: 12px; 
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+
+.login-card input:focus {
+    border-color: navy; 
+    box-shadow: 0 0 5px rgba(0, 0, 128, 0.5); 
+    outline: none; 
+}
+
+
+.login-card input::placeholder {
+    color: #aaa; 
+    opacity: 1; 
+}
+
+.login-card button {
+    width: 100%;
+    padding: 12px;
+    background-color: navy;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: block; /* Ensure buttons are block-level elements */
+    margin-bottom: 15px; /* Space between buttons */
+}
+
+.login-card button:hover {
+    background-color: #004080; 
+}
+
+.guest-btn {
+    background-color: #28a745; /* Change to your preferred color */
+}
+
+.guest-btn:hover {
+    background-color: #218838; /* Darker green for hover effect */
+}

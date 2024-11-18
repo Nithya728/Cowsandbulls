@@ -1,0 +1,58 @@
+
+
+
+    
+<body>
+  <div class="brand-logo"></div>
+<div class="game-container">
+ 
+
+  <!-- Game Instructions Section -->
+  <div *ngIf="showInstructions" class="instructions" >
+    <h1>BULLS AND COWS GAME</h1>
+    <h2>Welcome {{ username }}</h2>
+    <h3>Discover the Hidden Code!</h3>
+    
+    <p>Here computer is the codemaker who generates secret code </p>
+    <p>you are the codebreaker who guesses the code</p>
+    <p>Guess the secret 4 digits code and Click on Submit Guess Button.</p>
+    <p><strong>Bulls</strong> = correct code, correct position.</p>
+    <p><strong>Cows</strong> = correct code, wrong position.</p>
+    
+    <button (click)="startGame()">Got it! Start Playing</button>
+  </div>
+
+  <!-- Guess Input Section -->
+  <div *ngIf="!showInstructions" class="instructions" >
+    <div class="input-container">
+      <label for="guess">Enter your guess (4-digit number):</label>
+      <input id="guess" [(ngModel)]="guess" maxlength="4" />
+      <button (click)="onSubmit()">Submit Guess</button>
+    </div>
+
+    <!-- Display guesses and results -->
+    <div *ngIf="guessHistory.length > 0">
+      <h3>Guess History:</h3>
+      <ul class="guess-history">
+        <li *ngFor="let guess of guessHistory">
+          Guess: {{ guess.number }} - Result: {{ guess.result }}
+        </li>
+      </ul>
+    </div>
+
+    <div *ngIf="message">
+      <p>{{ message }}</p>
+    </div>
+
+    <div>
+      <button (click)="newGame()">New Game</button>
+      <button (click)="giveUp()">Give Up</button>
+      <button (click)="logout()">Logout</button>
+      <button (click)="Score()">Score</button>
+    </div>
+
+    
+
+
+  
+    </div>

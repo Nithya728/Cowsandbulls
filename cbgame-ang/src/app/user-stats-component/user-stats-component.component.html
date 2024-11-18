@@ -1,0 +1,36 @@
+<body>
+  <div class="brand-logo"></div>
+  <div class="game-container">
+
+    <!-- Back Button -->
+    
+
+    <div *ngIf="showInstructions" class="instructions">
+      <table *ngIf="gameStats">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Number of Wins</th>
+            <th>Give Ups</th>
+            <th>Games Played</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ gameStats.user.username }}</td>
+            <td>{{ gameStats.numberOfWins }}</td>
+            <td>{{ gameStats.giveUps }}</td>
+            <td>{{ gameStats.gamesPlayed }}</td>
+            <td>{{ gameStats.score }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p *ngIf="!gameStats">No game stats available for the user.</p>
+      <button (click)="goBack()" class="back-button">Back</button>
+    </div>
+
+
+   
+  </div>
+</body>
